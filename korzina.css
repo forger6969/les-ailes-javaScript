@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "roboto";
+    transition: 300ms all ease;
+}
+
+.container {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0px 4px 6px -4px #0000001A;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+    height: fit-content;
+    width: 235px;
+    padding: 12px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.productImg {
+    width: 100%;
+}
+
+.productName {
+    font-weight: 700;
+    font-size: 17.66px;
+    color: black;
+}
+
+.productPrice {
+    font-weight: 500;
+    font-size: 18.28px;
+    color: #FC004A;
+    padding-top: 10px;
+}
+
+.productBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #FC004A;
+    border: none;
+    margin-left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-top: 50px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.backBtn {
+    width: 300px;
+    background-color: #FC004A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.backSvg {
+    width: 10%;
+}
+
+.summ {
+    color: #FC004A;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.zakazBtn {
+    width: 300px;
+    background-color: #FC004A;
+    height: 36px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.zakazBox {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding-top: 50px;
+    padding-left: 400px;
+    padding-bottom: 100px;
+}
+
+.otmenBtn {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 5px;
+}
+
+.trashSvg {
+    width: 100%;
+    height: 100%;
+}
+
+.backBtn:hover {
+    background-color: transparent;
+    border: 2px solid #FC004A;
+    color: #FC004A;
+}
+
+.backBtn:hover .backSvg1 {
+    fill: #FC004A;
+}
+
+.zakazBtn:hover {
+    background-color: transparent;
+    color: #FC004A;
+    border: 2px solid #FC004A;
+}
+
+.podtverditBox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: #FC004A 0 0 4px 1px;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+.podtverditBox.active {
+    width: 40%;
+    height: 300px;
+    opacity: 1;
+}
+
+.zakazBtn2 {
+    width: 300px;
+    background-color: #FC004A;
+    height: 36px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.zakazBtn2:hover {
+    background-color: transparent;
+    color: #FC004A;
+    border: 2px solid #FC004A;
+}
+
+.otmen {
+    width: 300px;
+    background-color: white;
+    border: #FC004A 1px solid;
+    height: 36px;
+    color: #FC004A;
+    border-radius: 12px;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.otmen:hover {
+    color: white;
+    background-color: #FC004A;
+}
+
+.boxbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.container.active {
+    filter: blur(5px);
+}
+
+/* CSS */
+:root {
+    --accent: #FC004A;
+    /* красный */
+}
+
+/* Центрируем и задаём размер */
+.badge {
+    width: 126px;
+    height: 126px;
+    display: inline-grid;
+    place-items: center;
+    margin: 20px;
+}
+
+/* SVG занимает весь контейнер */
+.check {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Сам круг: fill — красный.
+   Делает эффект "появления" (pop + fade). */
+.ring {
+    fill: var(--accent);
+    transform-origin: 50% 50%;
+    transform: scale(0.6);
+    opacity: 0;
+    animation: pop 380ms cubic-bezier(.2, .9, .2, 1) forwards;
+}
+
+/* Галочка — белая обводка, без заливки.
+   stroke-dasharray/dashoffset используются для "рисования" линии. */
+.tick {
+    stroke: #fff;
+    stroke-width: 6;
+    stroke-dasharray: 100;
+    /* длина штриха — достаточно большая */
+    stroke-dashoffset: 100;
+    /* скрыта полностью */
+    opacity: 0;
+    /* ждем появления круга, затем рисуем галочку */
+    animation: draw 560ms ease-out 760ms forwards;
+}
+
+/* keyframes: появление круга */
+@keyframes pop {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* keyframes: рисование галочки (stroke-dashoffset -> 0) */
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 100;
+        opacity: 0;
+        transform-origin: 50% 50%;
+        transform: translateY(-2px);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.uspeshnoZakaz {
+    background-color: white;
+    box-shadow: #FC004A 0 0 4px 1px;
+    border-radius: 12px;
+    color: #FC004A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    max-width: 100%;
+    top: 0;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    transition: 300ms all ease;
+}
+
+.uspeshnoZakaz.active {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: 300ms all ease;
+}
+
+.uspZakazText {
+    font-weight: 600;
+    font-size: 35px;
+}

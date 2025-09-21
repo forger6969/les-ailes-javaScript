@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "roboto";
+}
+
+.container {
+    max-width: 100%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.header-btn {
+    background-color: #FC004A;
+    width: 256px;
+    height: 36px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-btn-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-link {
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+}
+
+.banner {
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.cards-item {
+    font-weight: 500;
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+.card {
+    box-shadow: 0px 4px 6px -4px #0000001A;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+    height: fit-content;
+    width: 235px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.productImg {
+    width: 100%;
+}
+
+.productName {
+    font-weight: 700;
+    font-size: 17.66px;
+    color: black;
+}
+
+.productPrice {
+    font-weight: 500;
+    font-size: 18.28px;
+    color: #FC004A;
+    padding-top: 10px;
+}
+
+.productBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #FC004A;
+    border: none;
+    margin-left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 300ms all ease;
+
+}
+
+.productBtn:hover {
+    background-color: transparent;
+    border: #FC004A 2px solid;
+    transition: 300ms all ease;
+}
+
+.productBtn:hover .productSvg {
+    fill: #FC004A;
+    transition: 300ms all ease;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-top: 50px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.korzinaBtn img {
+    width: 100%;
+}
+
+.korzinaBtn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.korzinaBtn::before {
+    content: var(--length);
+    background-color: red;
+    border-radius: 100%;
+    padding: 1px 5px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.zakazBtn {
+    width: fit-content;
+    padding: 7px;
+    background-color: #FC004A;
+    border: none;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    transition: 300ms all ease;
+}
+
+.zakazBtn:hover{
+    color: #FC004A;
+    background-color: white;
+    border: #FC004A 1px solid;
+    transition: 300ms all ease;
+}
