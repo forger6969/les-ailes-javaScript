@@ -15,20 +15,23 @@
 <body>
 
 
+
+
     <header class="header">
         <div class="container">
             <div class="header-wrapper">
 
                 <div class="logo-btn-box">
 
-                    <img class="header-logo" src="./AllImages/main_logo.svg (1).svg" alt="">
+                    <img data-aos="fade-right" class="header-logo" src="./AllImages/main_logo.svg (1).svg" alt="">
 
-                    <button class="header-btn"> <img src="./AllImages/location.svg (1).svg" alt=""> Укажите свой
+                    <button data-aos="fade-right" class="header-btn"> <img src="./AllImages/location.svg (1).svg"
+                            alt=""> Укажите свой
                         адрес</button>
                 </div>
 
                 <nav class="header-nav">
-                    <ul class="header-list">
+                    <ul data-aos="fade-left" class="header-list">
                         <li><a class="header-link" href="">О нас</a></li>
                         <li><a class="header-link" href="">Меню</a></li>
                         <li><a class="header-link" href="">Акции</a></li>
@@ -37,7 +40,7 @@
 
                     </ul>
 
-                    <a href="./korzina.html"> <button class="korzinaBtn">
+                    <a href="./korzina.html"> <button data-aos="fade-down" class="korzinaBtn">
                             <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -47,7 +50,7 @@
                         </button>
                     </a>
 
-                    <a href="./zakazi.html"><button class="zakazBtn">Заказы</button></a>
+                    <a href="./zakazi.html"><button data-aos="fade-down" class="zakazBtn">Заказы</button></a>
 
                 </nav>
 
@@ -69,18 +72,45 @@
 
         </section>
 
-        <section class="cards-section">
+        <section>
             <div class="container">
                 <div class="main-wrapper-2">
 
+                    <div class="categories-box">
 
-                    <p class="cards-item">Сеты</p>
-
-                    <div class="cards-wrapper">
-
+                        <a href="#set-sect"><button class="category-btn">Сеты</button></a>
+                        <a href="#lavash-sect"><button class="category-btn">Лаваш</button></a>
+                        <a href="#burger-sect"><button class="category-btn">Бургер</button></a>
+                        <a href="#kfc-sect"><button class="category-btn">Крылышки</button></a>
+                        <a href="#drink-sect"><button class="category-btn">Напитки</button></a>
+                        <a href="#shaurma-sect"><button class="category-btn">Шаурма</button></a>
 
                     </div>
 
+
+                    <p class="category-set">Сеты</p>
+                    <div class="cards-wrapper" id="set-sect">
+                    </div>
+
+                    <p class="category-set">Лавашы</p>
+                    <div class="cards-wrapper" id="lavash-sect">
+                    </div>
+
+                    <p class="category-set">Шаурма</p>
+                    <div class="cards-wrapper" id="shaurma-sect">
+                    </div>
+
+                    <p class="category-set">Бургер</p>
+                    <div class="cards-wrapper" id="burger-sect">
+                    </div>
+
+                    <p class="category-set">Крылышки</p>
+                    <div class="cards-wrapper" id="kfc-sect">
+                    </div>
+
+                    <p class="category-set">Напитки</p>
+                    <div class="cards-wrapper" id="drink-sect">
+                    </div>
 
                 </div>
             </div>
@@ -88,8 +118,6 @@
     </main>
 
 
-
-    
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
