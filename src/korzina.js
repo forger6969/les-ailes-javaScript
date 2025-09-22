@@ -95,7 +95,7 @@ let podtBox = document.querySelector(`.podtverditBox`)
 
 podtBox.innerHTML = `
 
-<p class="summ">Стоимость доставки: ${dostavka} сум </p>
+<p class="summ">Стоимость доставки: ${dostavka.toLocaleString(`ru-RU`)} сум </p>
 <p class="summ">Сумма вашего заказа: ${totalBB} сум </p>
  <div class="boxbox"><button class="zakazBtn2">Заказать</button>
  <button class="otmen">Отмена</button></div>

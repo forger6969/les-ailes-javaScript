@@ -10,8 +10,6 @@ zakaz.forEach((zak, index) => {
 
     zak.products.forEach(z => {
 
-        console.log(zak.numberr);
-
 
     })
 
