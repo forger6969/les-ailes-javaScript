@@ -9,6 +9,13 @@
     font-family: "roboto";
 }
 
+.header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+}
+
 .container {
     max-width: 100%;
     width: 85%;
@@ -70,14 +77,15 @@
 
 .card {
     box-shadow: 0px 4px 6px -4px #0000001A;
-    box-shadow: 0px 10px 15px -3px #0000001A;
     height: fit-content;
     width: 235px;
     padding: 12px;
     border-radius: 12px;
+    transition: 300ms all ease;
 }
 
 .productImg {
+    transition: 300ms all ease;
     width: 100%;
 }
 
@@ -111,13 +119,21 @@
 
 .productBtn:hover {
     background-color: transparent;
-    border: #FC004A 2px solid;
+    border: #FC004A 1px solid;
     transition: 300ms all ease;
+}
+
+.productBtnSvg {
+    transition: 300ms all ease;
+}
+
+.productBtn:hover .productBtnSvg {
+    transition: 300ms all ease;
+    transform: rotate(45deg);
 }
 
 .productBtn:hover .productSvg {
     fill: #FC004A;
-    transition: 300ms all ease;
 }
 
 .cards-wrapper {
@@ -136,25 +152,32 @@
 .korzinaBtn {
     width: 40px;
     height: 40px;
-    background-color: transparent;
+    background-color: #FC004A;
+    border-radius: 12px;
     border: none;
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .korzinaBtn::before {
     content: var(--length);
-    background-color: red;
+    background-color: #F4435B;
+    color: white;
     border-radius: 100%;
     padding: 1px 5px;
     width: fit-content;
     height: fit-content;
     position: absolute;
-    right: 0;
+    right: -5px;
+    bottom: 27px;
     display: flex;
     align-items: center;
     justify-self: center;
+    transition: 300ms all ease;
 }
 
 .header-nav {
@@ -189,4 +212,15 @@
 
 .korzinaBtn.jump {
     transform: scale(1.3);
+}
+
+.card:hover {
+    transition: 300ms all ease;
+
+    box-shadow: 0px 10px 15px -3px #0000001A;
+}
+
+.productImg:hover {
+    transition: 300ms all ease;
+    transform: scale(1.10);
 }
