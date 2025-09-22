@@ -5,11 +5,8 @@ let zakaz = JSON.parse(localStorage.getItem(`zakaz`)) || []
 
 console.log(zakaz);
 
-// array pastdan tepaga bolishi uchun reverse
-let reverseZakaz = zakaz.slice().reverse()
-
 // zakazlani DOM ga chiqazish
-reverseZakaz.forEach((zak, index) => {
+zakaz.forEach((zak, index) => {
 
     zak.products.forEach(z => {
 
