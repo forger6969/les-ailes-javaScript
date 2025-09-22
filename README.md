@@ -53,4 +53,4 @@
 
 1. Клонировать репозиторий:
    ```bash
-  git clone https://github.com/forger6969/les-ailes-javaScript.git
+   git clone https://github.com/forger6969/les-ailes-javaScript.git
