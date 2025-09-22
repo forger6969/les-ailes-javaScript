@@ -1,10 +1,15 @@
 let zakaziBox = document.querySelector(`.zakaziBox`)
 
+// localS dan zakazla arrayini olish
 let zakaz = JSON.parse(localStorage.getItem(`zakaz`)) || []
 
 console.log(zakaz);
 
-zakaz.forEach((zak, index) => {
+// array pastdan tepaga bolishi uchun reverse
+let reverseZakaz = zakaz.slice().reverse()
+
+// zakazlani DOM ga chiqazish
+reverseZakaz.forEach((zak, index) => {
 
     zak.products.forEach(z => {
 
@@ -19,7 +24,7 @@ zakaz.forEach((zak, index) => {
     zakazDiv.innerHTML = `
                 <p class="number">${zak.numberr}</p>
 
-                <p class="price">${zak.total} so'm</p>
+                <p class="price">${zak.total} сум</p>
 
                 <button data-index="${index}" class="checkBtn">Подробнее..</button>
         `
@@ -31,9 +36,8 @@ let cardsCont = document.querySelector(`.cards`)
 let container = document.querySelector(`.container`)
 let closeBtn = document.querySelector(`.closeBtn`)
 
+// btn bosilganda zakaz qilingan productlani korsatsh
 checkBtns.forEach(btn => {
-
-
     btn.addEventListener(`click`, () => {
 
         cardsCont.classList.add(`active`)
@@ -57,10 +61,13 @@ checkBtns.forEach(btn => {
 
             let pricee = zakazz.price.toLocaleString(`ru-RU`)
 
+            console.log(zakaz.imagee);
+
+
 
             divv.innerHTML = `
         
-        ${zakazz.imagee}
+        <img src="${zakazz.imagee}" alt="ProductPhoto">
         <p class="productName">${zakazz.names}</p>
         <p class="productPrice">${pricee} сум</p>
         `

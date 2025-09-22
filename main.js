@@ -1,4 +1,4 @@
-
+// productlar:
 let products = [
     {
         names: "Qiyqiriq сет",
@@ -63,18 +63,19 @@ let products = [
 
 ]
 
-
+// productlar i localS ga save qib qoysh:
 localStorage.setItem(`products`, JSON.stringify(products))
 
 
+// localS dan produclari olsh:
 let product = JSON.parse(localStorage.getItem("products"))
 let korzinaBtn = document.querySelector(".korzinaBtn")
 
-
-
 let cardContainer = document.querySelector(`.cards-wrapper`)
 
-product.forEach(p => {
+
+// productlari DOM ga chiqarish:
+product.forEach((p, index) => {
 
     let card = document.createElement(`div`)
     card.classList = `card`
@@ -86,7 +87,7 @@ product.forEach(p => {
     <img class="productImg" src="${p.imagee}" alt="">
   <p class="productName">${p.names}</p>
   <p class="productPrice">${price} сум</p>
- <button id="zakazBtn" class="productBtn"><svg  width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <button id="zakazBtn" data-index="${index}" class="productBtn"><svg  width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path class="productSvg" fill-rule="currentColor" clip-rule="evenodd" d="M14 0C14.5304 0 15.0391 0.210714 15.4142 0.585786C15.7893 0.960859 16 1.46957 16 2V12H26C26.5304 12 27.0391 12.2107 27.4142 12.5858C27.7893 12.9609 28 13.4696 28 14C28 14.5304 27.7893 15.0391 27.4142 15.4142C27.0391 15.7893 26.5304 16 26 16H16V26C16 26.5304 15.7893 27.0391 15.4142 27.4142C15.0391 27.7893 14.5304 28 14 28C13.4696 28 12.9609 27.7893 12.5858 27.4142C12.2107 27.0391 12 26.5304 12 26V16H2C1.46957 16 0.960859 15.7893 0.585786 15.4142C0.210714 15.0391 0 14.5304 0 14C0 13.4696 0.210714 12.9609 0.585786 12.5858C0.960859 12.2107 1.46957 12 2 12H12V2C12 1.46957 12.2107 0.960859 12.5858 0.585786C12.9609 0.210714 13.4696 0 14 0Z" fill="white"/>
 </svg>
 </button>
@@ -99,23 +100,32 @@ product.forEach(p => {
 
 let btn = document.querySelectorAll(`.productBtn`)
 
+
+// korzinaga qoshilgan produclari localS dan olamiz null bos yengi massiv
 let selectedProducts = JSON.parse(localStorage.getItem('selectProducts')) || []
 
-let count = 0
 
-
+// korzinaga qoshih knoopasi:
 btn.forEach(btnn => {
+
+
 
     btnn.addEventListener(`click`, () => {
 
-        let cardd = btnn.closest(`.card`)
-        console.log(cardd);
-        let namesProd = cardd.querySelector(`.productName`).textContent
-        let prodPrice = cardd.querySelector(`.productPrice`).textContent
-        let priceNumber = parseInt(prodPrice.replace(/\D/g, ""), 10)
-        let productImg = cardd.querySelector(`.productImg`).outerHTML
+        korzinaBtn.classList.add(`jump`)
 
-        console.log(priceNumber);
+        setTimeout(() => {
+            korzinaBtn.classList.remove(`jump`)
+        }, 300);
+
+        let index = btnn.getAttribute(`data-index`)
+
+        let indexProduct = product[index]
+        let namesProd = indexProduct.names
+        let priceNumber = indexProduct.price
+        let productImg = indexProduct.imagee
+
+        console.log(namesProd);
 
 
         let productOb = {
@@ -133,9 +143,12 @@ btn.forEach(btnn => {
     })
 });
 
+// korzina knopkasi ustida korzinadegi produclar lengthi 
 function korzina() {
     let s = JSON.parse(localStorage.getItem("selectProducts")) || []
     korzinaBtn.style.setProperty("--length", `"${s.length}"`)
 }
 
 korzina()
+
+// Tugadi :)

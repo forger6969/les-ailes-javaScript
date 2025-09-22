@@ -175,9 +175,18 @@
     transition: 300ms all ease;
 }
 
-.zakazBtn:hover{
+.zakazBtn:hover {
     color: #FC004A;
     background-color: white;
     border: #FC004A 1px solid;
     transition: 300ms all ease;
+}
+
+
+.korzinaBtn {
+    transition: transform 0.3s;
+}
+
+.korzinaBtn.jump {
+    transform: scale(1.3);
 }
