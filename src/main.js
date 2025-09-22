@@ -169,6 +169,7 @@ sects(shaurma, shaurmaSect)
 sects(burger, burgerSect)
 sects(drink, drinkSect)
 sects(chicken, kfcSect)
+sects(lavash , lavashSect)
 
 
 let btn = document.querySelectorAll(`.productBtn`)
