@@ -138,6 +138,7 @@ let burgerSect = document.getElementById(`burger-sect`)
 let kfcSect = document.getElementById(`kfc-sect`)
 let drinkSect = document.getElementById(`drink-sect`)
 
+// har productni ozini sect-ga chiqarish funciasi
 function sects(names, container) {
 
     names.forEach((set) => {
@@ -169,7 +170,7 @@ sects(shaurma, shaurmaSect)
 sects(burger, burgerSect)
 sects(drink, drinkSect)
 sects(chicken, kfcSect)
-sects(lavash , lavashSect)
+sects(lavash, lavashSect)
 
 
 let btn = document.querySelectorAll(`.productBtn`)

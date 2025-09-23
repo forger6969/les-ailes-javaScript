@@ -62,7 +62,7 @@ checkBtns.forEach(btn => {
 
             divv.innerHTML = `
         
-        <img src="${zakazz.imagee}" alt="ProductPhoto">
+        <img src="${zakazz.imagee}" class="productImg" alt="ProductPhoto">
         <p class="productName">${zakazz.names}</p>
         <p class="productPrice">${pricee} сум</p>
         `
