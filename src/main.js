@@ -108,7 +108,6 @@ let products = [
         imagee: './cardsImages/e15ac836c4b233679618c85d685276b9.png',
         category: 'lavash'
     }
-
 ]
 
 // productlar i localS ga save qib qoysh:
