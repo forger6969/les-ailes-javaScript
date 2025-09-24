@@ -2,7 +2,7 @@ let container = document.querySelector(`.cards-wrapper`)
 let zakazBox = document.querySelector(`.zakazBox`)
 
 // localS dan korzinaga qoshlgan prod lar ni olish:
-let selected = JSON.parse(localStorage.getItem('selectProducts'))
+let selected = JSON.parse(localStorage.getItem('selectProducts')) || []
 
 console.log(selected);
 
@@ -14,7 +14,7 @@ function render() {
 
     // Agar korzina bosh bosa text chiqaris:
     if (selected.length === 0) {
-        container.innerHTML = container.innerHTML = ` <p class="summ">Вы еще ничего не добавлили в корзину</p> `
+        container.innerHTML = ` <p class="summ">Вы еще ничего не добавлили в корзину</p> `
         zakazBox.innerHTML = ''
         return
     }
@@ -99,14 +99,16 @@ podtBox.innerHTML = `
 
 let otmen = document.querySelector(`.otmen`)
 
-zakazBtn.addEventListener(`click`, () => {
+if (zakazBtn) {
+    zakazBtn.addEventListener(`click`, () => {
 
-    let container = document.querySelector(`.container`)
+        let container = document.querySelector(`.container`)
 
-    podtBox.classList.add(`active`)
-    container.classList.add(`active`)
+        podtBox.classList.add(`active`)
+        container.classList.add(`active`)
 
-})
+    })
+}
 
 // otmena knopkasi bosilsa tasdiqlash box ni yopish
 otmen.addEventListener(`click`, () => {
@@ -125,7 +127,6 @@ let uspeshnoZakazContainer = document.querySelector(`.uspeshnoZakazContainer`)
 
 // zakazlarni arrayini localS dan olish yoq bosa yengi array ochish
 let zakaz = JSON.parse(localStorage.getItem(`zakaz`)) || []
-
 
 zakazBtn2.addEventListener(`click`, () => {
 

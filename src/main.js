@@ -113,8 +113,6 @@ let products = [
 // productlar i localS ga save qib qoysh:
 localStorage.setItem(`products`, JSON.stringify(products))
 
-
-
 // localS dan produclari olsh:
 let product = JSON.parse(localStorage.getItem("products"))
 console.log(product);
@@ -138,7 +136,7 @@ let kfcSect = document.getElementById(`kfc-sect`)
 let drinkSect = document.getElementById(`drink-sect`)
 
 // har productni ozini sect-ga chiqarish funciasi
-function sects(names, container) {
+function sectRenderDOM(names, container) {
 
     names.forEach((set) => {
 
@@ -161,12 +159,12 @@ function sects(names, container) {
     })
 
 }
-sects(sets, setSect)
-sects(shaurma, shaurmaSect)
-sects(burger, burgerSect)
-sects(drink, drinkSect)
-sects(chicken, kfcSect)
-sects(lavash, lavashSect)
+sectRenderDOM(sets, setSect)
+sectRenderDOM(shaurma, shaurmaSect)
+sectRenderDOM(burger, burgerSect)
+sectRenderDOM(drink, drinkSect)
+sectRenderDOM(chicken, kfcSect)
+sectRenderDOM(lavash, lavashSect)
 
 let btn = document.querySelectorAll(`.productBtn`)
 

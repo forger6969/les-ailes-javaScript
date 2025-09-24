@@ -132,7 +132,6 @@
 
 .productBtn:hover .productBtnSvg {
     transition: 300ms all ease;
-    transform: rotate(45deg);
 }
 
 .productBtn:hover .productSvg {
