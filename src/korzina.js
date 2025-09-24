@@ -131,6 +131,7 @@ let zakaz = JSON.parse(localStorage.getItem(`zakaz`)) || []
 zakazBtn2.addEventListener(`click`, () => {
 
     let numberrZakaz = `A${Math.floor(Math.random() * 1000)}`
+    const data = new Date()
 
 
     uspeshnoZakazContainer.innerHTML = `
@@ -156,7 +157,12 @@ zakazBtn2.addEventListener(`click`, () => {
     zakaz.unshift({
         numberr: numberrZakaz,
         products: [...selected],
-        total: totalBB
+        total: totalBB,
+        time: new Date(),
+        month: data.getMonth(),
+        day: data.getDate(),
+        hour: data.getHours(),
+        minute: data.getMinutes()
     })
     localStorage.setItem(`zakaz`, JSON.stringify(zakaz))
 

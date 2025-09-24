@@ -143,6 +143,7 @@ function sectRenderDOM(names, container) {
         let index = product.indexOf(set)
         let card = document.createElement(`div`)
         card.classList = `card`
+        card.setAttribute(`data-aos`, "zoom-in-up")
         let price = set.price.toLocaleString('ru-RU')
 
         card.innerHTML = `
@@ -212,5 +213,19 @@ function korzina() {
 }
 
 korzina()
+
+
+const swiper = new Swiper('.swiper', {
+    loop: true, // зацикленный скролл
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 5000,   // задержка 5 секунд (5000 мс)
+        disableOnInteraction: false, // не останавливать при ручном скролле
+    },
+});
+
 
 // Tugadi :)

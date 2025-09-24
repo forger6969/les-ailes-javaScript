@@ -16,6 +16,7 @@
     width: 100%;
     padding: 10px;
     backdrop-filter: blur(7px);
+    z-index: 3;
 }
 
 .container {
@@ -259,4 +260,24 @@
 
 .categories-box::-webkit-scrollbar {
     display: none;
+}
+
+.swiper {
+    z-index: 1 !important;
+}
+
+.swiperr-cont {
+    padding-top: 100px;
+}
+
+.swiper-slide {
+    border-radius: 12px;
+}
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff !important;
 }

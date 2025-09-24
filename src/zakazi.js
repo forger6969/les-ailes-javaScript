@@ -7,6 +7,14 @@ console.log(zakaz);
 
 // zakazlani DOM ga chiqazish
 zakaz.forEach((zak, index) => {
+    let time = new Date(zak.time)
+    let timeForm = time.toLocaleString(`ru-RU`, {
+        day: "2-digit",
+        month: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+    })
+
 
     let zakazDiv = document.createElement(`div`)
     zakazDiv.classList = 'zakaz'
@@ -14,8 +22,10 @@ zakaz.forEach((zak, index) => {
     zakazDiv.innerHTML = `
                 <p class="number">${zak.numberr}</p>
 
-                <p class="price">${zak.total} сум</p>
-
+                <div><p class="price">${zak.total} сум</p>
+                <p class="zakazDate">${timeForm}</p>
+                </div>
+                
                 <button data-index="${index}" class="checkBtn">Подробнее..</button>
         `
     zakaziBox.append(zakazDiv)
