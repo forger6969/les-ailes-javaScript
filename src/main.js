@@ -216,14 +216,14 @@ korzina()
 
 
 const swiper = new Swiper('.swiper', {
-    loop: true, // зацикленный скролл
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     autoplay: {
-        delay: 5000,   // задержка 5 секунд (5000 мс)
-        disableOnInteraction: false, // не останавливать при ручном скролле
+        delay: 5000,
+        disableOnInteraction: false,
     },
 });
 
