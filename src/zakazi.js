@@ -8,11 +8,6 @@ console.log(zakaz);
 // zakazlani DOM ga chiqazish
 zakaz.forEach((zak, index) => {
 
-    zak.products.forEach(z => {
-
-
-    })
-
     let zakazDiv = document.createElement(`div`)
     zakazDiv.classList = 'zakaz'
 
@@ -56,10 +51,6 @@ checkBtns.forEach(btn => {
 
             let pricee = zakazz.price.toLocaleString(`ru-RU`)
 
-            console.log(zakaz.imagee);
-
-
-
             divv.innerHTML = `
         
         <img src="${zakazz.imagee}" class="productImg" alt="ProductPhoto">
@@ -70,17 +61,10 @@ checkBtns.forEach(btn => {
             cardsCont.append(divv)
 
         })
-
-
-
-
     })
-
 })
 
-
 closeBtn.addEventListener(`click`, () => {
-
     cardsCont.classList.remove(`active`)
     container.style.filter = "blur(0)"
     closeBtn.classList.remove(`active`)

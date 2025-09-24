@@ -6,7 +6,6 @@ let selected = JSON.parse(localStorage.getItem('selectProducts'))
 
 console.log(selected);
 
-
 // localS dan olingan prod la ni DOM ga chiqarish funciasi
 function render() {
 
@@ -20,7 +19,10 @@ function render() {
         return
     }
 
+    let total = 0;
+
     selected.forEach((p, index) => {
+        total += p.price
 
         let card = document.createElement(`div`)
         card.classList = `card`
@@ -44,11 +46,6 @@ function render() {
 
     })
 
-    let total = 0;
-
-    selected.forEach(p => {
-        total += p.price
-    })
 
     // price:75000 => 75 000 qilishga kere
     let totalB = total.toLocaleString('ru-RU')
@@ -78,7 +75,6 @@ function render() {
 render()
 
 let total = 0;
-
 selected.forEach(p => {
     total += p.price
 })
