@@ -186,4 +186,15 @@ zakazBtn2.addEventListener(`click`, () => {
 
 })
 
+const body = document.querySelector(`body`);
+const cards = document.querySelectorAll(`.card`);
+const productName = document.querySelectorAll('.productName');
+
+if (localStorage.getItem(`theme`) === 'night') {
+    body.classList.add(`night`);
+    cards.forEach(card => card.classList.add(`night`));
+    productName.forEach(names => names.classList.add(`night`));
+
+}
+
 // Tugadi :)

@@ -10,13 +10,43 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --nightBody: #121212;
+    --cardNight: #1E1E1E;
+    --textNight: #E0E0E0;
+    --textNight2: #A0A0A0;
+    --btnNight: #FC004A;
+}
+
+body.night {
+    background-color: var(--nightBody);
+    color: var(--textNight);
+}
+
+.card.night {
+    background-color: var(--cardNight);
+    color: var(--textNight);
+}
+
+.productName.night {
+    color: var(--textNight);
+}
+
+a.night {
+    color: var(--textNight2);
+}
+
+.header.night {
+    background-color: rgba(71, 71, 71, 0.742);
+}
+
 .header {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.742);
     width: 100%;
     padding: 10px;
     backdrop-filter: blur(7px);
-    z-index: 3;
+    z-index: 999;
 }
 
 .container {
@@ -82,7 +112,7 @@
 .card {
     box-shadow: 0px 4px 6px -4px #0000001A;
     height: fit-content;
-    width: 235px;
+    width: 300px;
     padding: 12px;
     border-radius: 12px;
     transition: 300ms all ease;
@@ -90,7 +120,9 @@
 
 .productImg {
     transition: 300ms all ease;
-    width: 100%;
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
 }
 
 .productName {
@@ -112,7 +144,7 @@
     border-radius: 12px;
     background-color: #FC004A;
     border: none;
-    margin-left: 80%;
+    margin-left: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +174,7 @@
 .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 20px;
     padding-top: 50px;
     margin: 0 auto;
 }
@@ -202,7 +234,7 @@
 
 .zakazBtn:hover {
     color: #FC004A;
-    background-color: white;
+    background-color: transparent;
     border: #FC004A 1px solid;
     transition: 300ms all ease;
 }
@@ -280,4 +312,76 @@
 
 .swiper-pagination-bullet-active {
     background: #fff !important;
+}
+
+.themeBtn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: 300ms all ease;
+}
+
+.themeBtn.night {
+    background: rgb(80, 80, 80);
+}
+
+.themeBtn img {
+    width: 80%;
+    opacity: 1;
+    transition: all 0.3s ease;
+    transform: rotate(30deg);
+}
+
+
+.themeSvg.hide {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* контейнер */
+.theme-switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+/* скрываем обычный чекбокс */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* фон переключателя */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+/* кружок внутри */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+/* активное состояние */
+input:checked+.slider {
+    background-color: #1E1E1E;
+    /* твой акцентный цвет */
+}
+
+input:checked+.slider::before {
+    transform: translateX(24px);
 }

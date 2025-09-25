@@ -344,3 +344,25 @@
     font-size: 30px;
     color: #FC004A;
 }
+
+:root {
+    --nightBody: #121212;
+    --cardNight: #1E1E1E;
+    --textNight: #E0E0E0;
+    --textNight2: #A0A0A0;
+    --btnNight: #FC004A;
+}
+
+body.night {
+    background-color: var(--nightBody);
+    color: var(--textNight);
+}
+
+.card.night {
+    background-color: var(--cardNight);
+    color: var(--textNight);
+}
+
+.productName.night {
+    color: var(--textNight);
+}

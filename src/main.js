@@ -1,9 +1,27 @@
 // productlar:
 let products = [
     {
-        names: "Qiyqiriq сет",
-        price: 45000,
-        imagee: "./cardsImages/HZUU2lH1ZbPF8RUMbkI00HctLUq3UCBwisuMKesd.webp (1).png",
+        names: '4 Friends Лестер чиз',
+        price: 138000,
+        imagee: './cardsImages/4xFrinendsLester.webp',
+        category: 'set'
+    },
+    {
+        names: '4 Friends Классик бургер',
+        price: 126000,
+        imagee: './cardsImages/4xFriendsBurger.webp',
+        category: `set`
+    },
+    {
+        names: '4 Friends Лонгер чиз',
+        price: 126000,
+        imagee: `./cardsImages/4xFriendsLonger.webp`,
+        category: `set`
+    },
+    {
+        names: '4 Friends Хот-дог',
+        price: 117000,
+        imagee: './cardsImages/4xFriendsHotDog.webp',
         category: 'set'
     },
     {
@@ -19,18 +37,6 @@ let products = [
         category: 'set'
     },
     {
-        names: 'Лонгер рингс сет',
-        price: 45000,
-        imagee: "./cardsImages/xJNb3iZ1NJ8Yx11eVSQ3X2CMSn5nruiAH8p9A35U.webp (1).png",
-        category: 'set'
-    },
-    {
-        names: 'Биг сет',
-        price: 62000,
-        imagee: "./cardsImages/45sfsptLWqT9vq7X3cfx1bIXZXLUuCULyln6EZlf.webp (1).png",
-        category: 'set'
-    },
-    {
         names: "Лестер сет",
         price: 53000,
         imagee: './cardsImages/9RplsrJissmFUdjyIDNnRsjr12vfFUc2RZwd7iOq.webp.png',
@@ -43,9 +49,9 @@ let products = [
         category: 'set'
     },
     {
-        names: 'Комбо сет большой',
+        names: 'Комбо сет',
         price: 20000,
-        imagee: './cardsImages/p0TZUFzdFp7riQd4NFukH7bYCguz0h9jT5jbHNXy.webp.png',
+        imagee: './cardsImages/komboSet.webp',
         category: 'set'
     },
     {
@@ -79,39 +85,220 @@ let products = [
         category: 'lavash'
     },
     {
-        names: 'Шаурма куринная',
-        price: 37000,
-        imagee: './cardsImages/10f9558cc2c519fe3ac868a3a947dccc.png',
-        category: 'shaurma'
-    },
-    {
-        names: "Биг гамбургер",
-        price: 42000,
-        imagee: "./cardsImages/22d3ae40de5e87dc325a2f380a640b2f.png",
-        category: "burger"
-    },
-    {
-        names: 'Арбузный сок',
-        price: 18000,
-        imagee: './cardsImages/969b3c4e09463e1e44df65d43036a054.png',
-        category: 'drink'
-    },
-    {
-        names: `Биг шаурма Куринная`,
-        price: 40000,
-        imagee: './cardsImages/297068ceb8cd731f8e846714804e22ae.png',
-        category: 'shaurma'
-    },
-    {
         names: 'Лаваш Сырный говяжий',
         price: 43000,
         imagee: './cardsImages/e15ac836c4b233679618c85d685276b9.png',
         category: 'lavash'
-    }
+    },
+    {
+        names: 'Hotlegs (без костей), 2шт',
+        price: 25000,
+        imagee: './cardsImages/hotlegs2sht.png',
+        category: `chicken`
+    },
+    {
+        names: `Hotlegs, 3шт`,
+        price: 33000,
+        imagee: './cardsImages/Hotlegs3sht.png',
+        category: 'chicken'
+    },
+    {
+        names: 'Hotlegs (без костей), 5 шт',
+        price: 59000,
+        imagee: './cardsImages/hotlegs5sht.png',
+        category: 'chicken'
+    },
+    {
+        names: `Hotlegs, 10шт`,
+        price: 99000,
+        imagee: './cardsImages/Hotlegs10sht.png',
+        category: 'chicken'
+    },
+    {
+        names: `Острые крылышки, 17 шт`,
+        price: 108000,
+        imagee: './cardsImages/krilishki17hot.webp',
+        category: 'chicken'
+    },
+    {
+        names: 'Крылышки, 17 шт',
+        price: 108000,
+        imagee: './cardsImages/krilishki17sht.webp',
+        category: 'chicken'
+    },
+    {
+        names: `Острые стрипсы, 17 шт`,
+        price: 108000,
+        imagee: './cardsImages/strips17hot.webp',
+        category: 'chicken'
+    },
+    {
+        names: 'Стрипсы, 17шт',
+        price: 108000,
+        imagee: `./cardsImages/strips17sht.webp`,
+        category: 'chicken'
+    },
+    {
+        names: 'Mazzarella burger сет Sprite',
+        price: 39000,
+        imagee: './cardsImages/mazarellaBurger.png',
+        category: 'set'
+    },
+    {
+        names: 'Mazzarella burger сет Fanta',
+        price: 39000,
+        imagee: './cardsImages/mazarellaBurgerFanta.png',
+        category: 'set'
+    },
+    {
+        names: 'Mazzarella burger сет coca-Cola',
+        price: 39000,
+        imagee: './cardsImages/mazarellaBurgerCola.webp',
+        category: `set`
+    },
+    {
+        names: 'Картофельные шарики с сыром, 11шт',
+        price: 25000,
+        imagee: './cardsImages/potatoCircle11.png',
+        category: 'snek'
+    },
+    {
+        names: 'Картофельные шарики с сыром, 7шт',
+        price: 18000,
+        imagee: './cardsImages/potatoCircle7.webp',
+        category: 'snek'
+    },
+    {
+        names: 'Куринные нагетсы, 5шт',
+        price: 20000,
+        imagee: './cardsImages/neggets5.webp',
+        category: 'snek'
+    },
+    {
+        names: 'Чикен стикс, 5шт',
+        price: 20000,
+        imagee: './cardsImages/chickenStix5.webp',
+        category: 'snek'
+    },
+    {
+        names: 'Чикен стикс, 3шт',
+        price: 15000,
+        imagee: './cardsImages/chickenStiz3.webp',
+        category: 'snek'
+    },
+    {
+        names: 'Американ лестер',
+        price: 27000,
+        imagee: './cardsImages/americanLester.webp',
+        category: 'lester'
+    },
+    {
+        names: 'Биг бокс',
+        price: 33000,
+        imagee: './cardsImages/bigBoxLester.webp',
+        category: 'lester'
+    },
+    {
+        names: 'Лестер цезарь',
+        price: 27000,
+        imagee: './cardsImages/tesarLester.webp',
+        category: `lester`
+    },
+    {
+        names: 'Лестер тостер',
+        price: 27000,
+        imagee: './cardsImages/tosterLester.webp',
+        category: `lester`
+    },
+    {
+        names: 'Барбекью бургер',
+        price: 27000,
+        imagee: './cardsImages/barbekuBurger.png',
+        category: 'burger'
+    },
+    {
+        names: 'Бигер бургер',
+        price: 30000,
+        imagee: './cardsImages/bigerBurger.webp',
+        category: 'burger'
+    },
+    {
+        names: 'Сингер бургер',
+        price: 27000,
+        imagee: './cardsImages/singerBurger.webp',
+        category: 'burger'
+    },
+    {
+        names: "Классик бургер",
+        price: 25000,
+        imagee: './cardsImages/klassikBurger.webp',
+        category: './cardsImages/klassikBurger.webp'
+    },
+    {
+        names: 'Дабл чикен чиз',
+        price: 34000,
+        imagee: './cardsImages/dubbleChickenBurgher.png',
+        category: 'burger'
+    },
+    {
+        names: "Fruit'Ailes",
+        price: 23000,
+        imagee: './cardsImages/vishnaCola.webp',
+        category: 'drink'
+    },
+    {
+        names: "Fruit'Ailes тархун",
+        price: 23000,
+        imagee: './cardsImages/tarxun.webp',
+        category: 'drink'
+    },
+    {
+        names: "Fruit'Ailes персик",
+        price: 23000,
+        imagee: './cardsImages/persik.webp',
+        category: 'drink'
+    },
+    {
+        names: "Fruit'Ailes груша",
+        price: 23000,
+        imagee: './cardsImages/grusha.webp',
+        category: 'drink'
+    },
+    {
+        names: "Fruit'Ailes огурец-лайм",
+        price: 23000,
+        imagee: './cardsImages/cucumberLime.webp',
+        category: 'drink'
+    },
+    {
+        names: "new moxito",
+        price: 26000,
+        imagee: './cardsImages/moxito.webp',
+        category: 'drink'
+    },
+    {
+        names: 'Berry moxito',
+        price: 26000,
+        imagee: './cardsImages/berryMoxito.webp',
+        category: 'drink'
+    },
+    {
+        names: 'Айсти',
+        price: 20000,
+        imagee: './cardsImages/iceTea.webp',
+        category: 'drink'
+    },
+    {
+        names: 'Айс кофе',
+        price: 17000,
+        imagee: './cardsImages/iceCoffee.png',
+        category: 'drink'
+    },
 ]
 
 // productlar i localS ga save qib qoysh:
 localStorage.setItem(`products`, JSON.stringify(products))
+
 
 // localS dan produclari olsh:
 let product = JSON.parse(localStorage.getItem("products"))
@@ -121,19 +308,19 @@ let korzinaBtn = document.querySelector(".korzinaBtn")
 
 // har xil category la ni filter qib ovolish
 let sets = product.filter(productt => productt.category === 'set')
-let lavash = product.filter(productt => productt.category === 'lavash')
-let shaurma = product.filter(productt => productt.category === 'shaurma')
 let burger = product.filter(productt => productt.category === 'burger')
 let drink = product.filter(productt => productt.category === 'drink')
 let chicken = product.filter(productt => productt.category === 'chicken')
+let snek = product.filter(productt => productt.category === 'snek')
+let lester = product.filter(productt => productt.category === 'lester')
 
 // har xil category la ni har xil sect la ga chiqarish uchun sect lar
 let setSect = document.getElementById(`set-sect`)
-let lavashSect = document.getElementById(`lavash-sect`)
-let shaurmaSect = document.getElementById(`shaurma-sect`)
 let burgerSect = document.getElementById(`burger-sect`)
 let kfcSect = document.getElementById(`kfc-sect`)
 let drinkSect = document.getElementById(`drink-sect`)
+let sneksSect = document.getElementById(`sneks-sect`)
+let lesterSect = document.getElementById(`lester-sect`)
 
 // har productni ozini sect-ga chiqarish funciasi
 function sectRenderDOM(names, container) {
@@ -161,11 +348,11 @@ function sectRenderDOM(names, container) {
 
 }
 sectRenderDOM(sets, setSect)
-sectRenderDOM(shaurma, shaurmaSect)
 sectRenderDOM(burger, burgerSect)
 sectRenderDOM(drink, drinkSect)
 sectRenderDOM(chicken, kfcSect)
-sectRenderDOM(lavash, lavashSect)
+sectRenderDOM(snek, sneksSect)
+sectRenderDOM(lester, lesterSect)
 
 let btn = document.querySelectorAll(`.productBtn`)
 
@@ -227,5 +414,43 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+// dark/light mode
+const body = document.querySelector(`body`);
+const cards = document.querySelectorAll(`.card`);
+const header = document.querySelector('.header');
+const productName = document.querySelectorAll('.productName');
+let themeBtn = document.getElementById("switch");
+
+if (localStorage.getItem(`theme`) === 'night') {
+    body.classList.add(`night`);
+    header.classList.add(`night`);
+    themeBtn.classList.add('night');
+    cards.forEach(card => card.classList.add(`night`));
+    productName.forEach(names => names.classList.add(`night`));
+
+    themeBtn.checked = true;
+} else {
+    body.classList.remove(`night`);
+    header.classList.remove(`night`);
+    themeBtn.classList.remove('night');
+    cards.forEach(card => card.classList.remove(`night`));
+    productName.forEach(names => names.classList.remove(`night`));
+
+    themeBtn.checked = false;
+}
+
+themeBtn.addEventListener(`click`, () => {
+    body.classList.toggle(`night`);
+    header.classList.toggle(`night`);
+    themeBtn.classList.toggle(`night`);
+    cards.forEach(card => card.classList.toggle(`night`));
+    productName.forEach(names => names.classList.toggle(`night`));
+
+    if (themeBtn.checked) {
+        localStorage.setItem(`theme`, `night`);
+    } else {
+        localStorage.setItem(`theme`, `light`);
+    }
+});
 
 // Tugadi :)
