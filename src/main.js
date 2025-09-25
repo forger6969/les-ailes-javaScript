@@ -409,7 +409,7 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
     },
     autoplay: {
-        delay: 5000,
+        delay: 3500,
         disableOnInteraction: false,
     },
 });
