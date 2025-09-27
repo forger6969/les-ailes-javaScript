@@ -79,18 +79,6 @@ let products = [
         category: 'chicken'
     },
     {
-        names: 'Острый лаваш Говядина',
-        price: 39000,
-        imagee: './cardsImages/0a1c5a19dce2320592e9ca1d9b2c2130.png',
-        category: 'lavash'
-    },
-    {
-        names: 'Лаваш Сырный говяжий',
-        price: 43000,
-        imagee: './cardsImages/e15ac836c4b233679618c85d685276b9.png',
-        category: 'lavash'
-    },
-    {
         names: 'Hotlegs (без костей), 2шт',
         price: 25000,
         imagee: './cardsImages/hotlegs2sht.png',
@@ -139,7 +127,7 @@ let products = [
         category: 'chicken'
     },
     {
-        names: 'Mazzarella burger сет Sprite',
+        names: 'Mazzarella   burger сет Sprite',
         price: 39000,
         imagee: './cardsImages/mazarellaBurger.png',
         category: 'set'
@@ -395,6 +383,7 @@ searchInput.addEventListener(`input`, () => {
 
 })
 
+
 // korzinaga qoshih knoopasi:
 let btn = document.querySelectorAll(`.productBtn`)
 
@@ -457,20 +446,24 @@ const body = document.querySelector(`body`);
 const cards = document.querySelectorAll(`.card`);
 const header = document.querySelector('.header');
 const productName = document.querySelectorAll('.productName');
+const inputs = document.querySelector(`input`)
 let themeBtn = document.getElementById("switch");
 
 if (localStorage.getItem(`theme`) === 'night') {
     body.classList.add(`night`);
     header.classList.add(`night`);
     themeBtn.classList.add('night');
+    searchBox.classList.add('night')
     cards.forEach(card => card.classList.add(`night`));
     productName.forEach(names => names.classList.add(`night`));
+    inputs.style.color = `white`
 
     themeBtn.checked = true;
 } else {
     body.classList.remove(`night`);
     header.classList.remove(`night`);
     themeBtn.classList.remove('night');
+    searchBox.classList.remove('night')
     cards.forEach(card => card.classList.remove(`night`));
     productName.forEach(names => names.classList.remove(`night`));
 

@@ -419,6 +419,10 @@ input:checked+.slider::before {
     opacity: 1;
 }
 
+#searchInput:focus {
+    border: 1px solid #FC004A;
+}
+
 .searchCardsBox {
     background-color: white;
     height: fit-content;
@@ -438,6 +442,10 @@ input:checked+.slider::before {
     box-shadow: #A0A0A0 0 0 5px 1px;
 }
 
+.searchCardsBox.night {
+    background-color: var(--cardNight);
+}
+
 .searchCardsBox::-webkit-scrollbar {
     width: 10px;
     color: #FC004A;
@@ -455,7 +463,6 @@ input:checked+.slider::before {
     justify-content: center;
     cursor: pointer;
     transition: 300ms all ease;
-
 }
 
 .productBtnSearch:hover {
