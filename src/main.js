@@ -442,11 +442,11 @@ const swiper = new Swiper('.swiper', {
 });
 
 // dark/light mode
-const body = document.querySelector(`body`);
-const cards = document.querySelectorAll(`.card`);
-const header = document.querySelector('.header');
-const productName = document.querySelectorAll('.productName');
-const inputs = document.querySelector(`input`)
+let body = document.querySelector(`body`);
+let cards = document.querySelectorAll(`.card`);
+let header = document.querySelector('.header');
+let productName = document.querySelectorAll('.productName');
+let inputs = document.querySelector(`input`)
 let themeBtn = document.getElementById("switch");
 
 if (localStorage.getItem(`theme`) === 'night') {

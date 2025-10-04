@@ -21,6 +21,11 @@
 body.night {
     background-color: var(--nightBody);
     color: var(--textNight);
+    transition: 300ms all ease;
+}
+
+body {
+    transition: 300ms all ease;
 }
 
 .card.night {
